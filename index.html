@@ -60,20 +60,19 @@
       background: var(--navy);
       color: white;
       text-align: center;
-      padding: 5rem 1.5rem 4rem;
+      padding: 4rem 1.5rem 4rem;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
     }
-    .hero .badge {
-      display: inline-block;
-      background: rgba(230,57,70,0.15);
-      border: 1px solid rgba(230,57,70,0.4);
-      color: #f08088;
-      font-size: 0.78rem;
-      font-weight: 600;
-      letter-spacing: 0.08em;
-      text-transform: uppercase;
-      padding: 0.35rem 1rem;
-      border-radius: 999px;
-      margin-bottom: 1.5rem;
+    .hero .logo {
+      width: 160px;
+      height: 160px;
+      object-fit: contain;
+      margin-bottom: 2rem;
+      filter: drop-shadow(0 8px 24px rgba(0,0,0,0.3));
     }
     .hero h1 {
       font-size: clamp(2rem, 5vw, 3.2rem);
@@ -258,7 +257,7 @@
 
   <!-- HERO -->
   <div class="hero">
-    <div class="badge">🚀 Tamakloe Ventures LLC</div>
+    <img src="logo.png" alt="Tamakloe Ventures LLC" class="logo" />
     <h1>Building technology that<br><span>solves real problems</span></h1>
     <p>Practical, mobile-first apps that help everyday people make faster, smarter decisions.</p>
   </div>
