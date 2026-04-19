@@ -5,64 +5,285 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Tamakloe Ventures LLC — Building Useful Technology</title>
   <meta name="description" content="Tamakloe Ventures LLC builds practical technology that solves real everyday problems." />
+
+  <!-- Open Graph -->
   <meta property="og:title" content="Tamakloe Ventures LLC" />
   <meta property="og:description" content="Building useful technology that solves real everyday problems." />
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://tamakloeventures.com" />
+
   <style>
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-    :root { --navy: #1D3557; --red: #E63946; --teal: #2A9D8F; --light: #F8F9FA; --gray: #6B7280; }
-    body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; background: var(--light); color: var(--navy); min-height: 100vh; display: flex; flex-direction: column; overflow-x: hidden; }
-    nav { background: var(--navy); padding: 1rem 1.5rem; display: flex; align-items: center; justify-content: space-between; }
-    nav .brand { color: white; font-weight: 800; font-size: 1.1rem; text-decoration: none; letter-spacing: -0.3px; }
+
+    :root {
+      --navy:  #1D3557;
+      --red:   #E63946;
+      --teal:  #2A9D8F;
+      --light: #F8F9FA;
+      --gray:  #6B7280;
+    }
+
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+      background: var(--light);
+      color: var(--navy);
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      overflow-x: hidden;
+    }
+
+    /* NAV */
+    nav {
+      background: var(--navy);
+      padding: 1rem 1.5rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    nav .brand {
+      color: white;
+      font-weight: 800;
+      font-size: 1.1rem;
+      text-decoration: none;
+      letter-spacing: -0.3px;
+    }
     nav .brand span { color: var(--red); }
-    nav a.contact { color: rgba(255,255,255,0.7); font-size: 0.85rem; text-decoration: none; }
+    nav a.contact {
+      color: rgba(255,255,255,0.7);
+      font-size: 0.85rem;
+      text-decoration: none;
+    }
     nav a.contact:hover { color: white; }
-    .hero { background: var(--navy); color: white; text-align: center; padding: 2.5rem 1.5rem 3rem; display: flex; flex-direction: column; align-items: center; justify-content: center; }
-    .hero .logo { width: 130px; height: 130px; object-fit: contain; margin-bottom: 1.25rem; mix-blend-mode: multiply; border-radius: 50%; }
-    .hero h1 { font-size: clamp(2rem, 5vw, 3.2rem); font-weight: 900; line-height: 1.15; margin-bottom: 1rem; }
+
+    /* HERO */
+    .hero {
+      background: var(--navy);
+      color: white;
+      text-align: center;
+      padding: 2.5rem 1.5rem 3rem;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+    }
+    .hero .logo {
+      width: 130px;
+      height: 130px;
+      object-fit: contain;
+      margin-bottom: 1.25rem;
+      mix-blend-mode: multiply;
+      border-radius: 50%;
+    }
+    .hero h1 {
+      font-size: clamp(2rem, 5vw, 3.2rem);
+      font-weight: 900;
+      line-height: 1.15;
+      margin-bottom: 1rem;
+    }
     .hero h1 span { color: var(--red); }
-    .hero p { color: rgba(255,255,255,0.65); font-size: 1.1rem; max-width: 480px; margin: 0 auto; line-height: 1.6; }
-    .products { max-width: 900px; margin: 0 auto 3rem; padding: 2rem 1.25rem 0; display: grid; grid-template-columns: 1fr; gap: 1.25rem; }
-    @media (min-width: 640px) { .products { grid-template-columns: repeat(2, 1fr); padding-top: 2.5rem; } }
-    .card { background: white; border-radius: 1.25rem; box-shadow: 0 4px 24px rgba(0,0,0,0.08); overflow: hidden; display: flex; flex-direction: column; transition: transform 0.2s, box-shadow 0.2s; }
-    .card:hover { transform: translateY(-4px); box-shadow: 0 8px 32px rgba(0,0,0,0.12); }
-    .card-header { padding: 1.75rem 1.75rem 1.25rem; display: flex; align-items: center; gap: 1rem; }
-    .card-icon { width: 56px; height: 56px; border-radius: 14px; display: flex; align-items: center; justify-content: center; font-size: 1.6rem; flex-shrink: 0; }
-    .icon-red { background: #FEE2E4; } .icon-blue { background: #DBEAFE; }
-    .card-title { font-size: 1.3rem; font-weight: 800; color: var(--navy); }
-    .card-title span.accent-red { color: var(--red); } .card-title span.accent-blue { color: #2563EB; }
-    .card-tag { display: inline-block; font-size: 0.7rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.07em; padding: 0.2rem 0.6rem; border-radius: 999px; margin-top: 0.25rem; }
+    .hero p {
+      color: rgba(255,255,255,0.65);
+      font-size: 1.1rem;
+      max-width: 480px;
+      margin: 0 auto;
+      line-height: 1.6;
+    }
+
+    /* PRODUCTS */
+    .products {
+      max-width: 900px;
+      margin: 0 auto 3rem;
+      padding: 2rem 1.25rem 0;
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 1.25rem;
+    }
+    @media (min-width: 640px) {
+      .products {
+        grid-template-columns: repeat(2, 1fr);
+        padding-top: 2.5rem;
+      }
+    }
+
+    .card {
+      background: white;
+      border-radius: 1.25rem;
+      box-shadow: 0 4px 24px rgba(0,0,0,0.08);
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      transition: transform 0.2s, box-shadow 0.2s;
+    }
+    .card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 8px 32px rgba(0,0,0,0.12);
+    }
+
+    .card-header {
+      padding: 1.75rem 1.75rem 1.25rem;
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+    }
+    .card-icon {
+      width: 56px;
+      height: 56px;
+      border-radius: 14px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.6rem;
+      flex-shrink: 0;
+    }
+    .icon-red  { background: #FEE2E4; }
+    .icon-blue { background: #DBEAFE; }
+
+    .card-title {
+      font-size: 1.3rem;
+      font-weight: 800;
+      color: var(--navy);
+    }
+    .card-title span.accent-red  { color: var(--red); }
+    .card-title span.accent-blue { color: #2563EB; }
+
+    .card-tag {
+      display: inline-block;
+      font-size: 0.7rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.07em;
+      padding: 0.2rem 0.6rem;
+      border-radius: 999px;
+      margin-top: 0.25rem;
+    }
     .tag-live { background: #D1FAE5; color: #065F46; }
-    .card-body { padding: 0 1.75rem 1.5rem; flex: 1; }
-    .card-body p { color: var(--gray); font-size: 0.95rem; line-height: 1.6; margin-bottom: 1.25rem; }
-    .features { list-style: none; display: flex; flex-direction: column; gap: 0.5rem; margin-bottom: 1.5rem; }
-    .features li { font-size: 0.88rem; color: var(--navy); display: flex; align-items: center; gap: 0.5rem; }
-    .features li::before { content: '✓'; font-weight: 700; color: var(--teal); flex-shrink: 0; }
-    .card-footer { padding: 1.25rem 1.75rem; border-top: 1px solid #F1F5F9; }
-    .btn { display: block; width: 100%; text-align: center; padding: 0.85rem; border-radius: 0.85rem; font-weight: 700; font-size: 0.95rem; text-decoration: none; transition: opacity 0.15s; }
-    .btn:hover { opacity: 0.88; } .btn-red { background: var(--red); color: white; } .btn-blue { background: #2563EB; color: white; }
-    .about { background: white; border-top: 1px solid #E5E7EB; padding: 3.5rem 1.5rem; text-align: center; }
-    .about h2 { font-size: 1.5rem; font-weight: 800; margin-bottom: 0.75rem; }
-    .about p { color: var(--gray); max-width: 520px; margin: 0 auto 2rem; line-height: 1.7; font-size: 0.95rem; }
-    .about a.cta { display: inline-block; background: var(--navy); color: white; padding: 0.8rem 2rem; border-radius: 0.85rem; text-decoration: none; font-weight: 700; font-size: 0.95rem; }
+
+    .card-body {
+      padding: 0 1.75rem 1.5rem;
+      flex: 1;
+    }
+    .card-body p {
+      color: var(--gray);
+      font-size: 0.95rem;
+      line-height: 1.6;
+      margin-bottom: 1.25rem;
+    }
+
+    .features {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 0.5rem;
+      margin-bottom: 1.5rem;
+    }
+    .features li {
+      font-size: 0.88rem;
+      color: var(--navy);
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+    .features li::before {
+      content: '✓';
+      font-weight: 700;
+      color: var(--teal);
+      flex-shrink: 0;
+    }
+
+    .card-footer {
+      padding: 1.25rem 1.75rem;
+      border-top: 1px solid #F1F5F9;
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+    }
+    .card-footer .btn { flex: 1; }
+    .qr {
+      width: 64px;
+      height: 64px;
+      border-radius: 8px;
+      border: 1px solid #E5E7EB;
+      flex-shrink: 0;
+    }
+    .btn {
+      display: block;
+      width: 100%;
+      text-align: center;
+      padding: 0.85rem;
+      border-radius: 0.85rem;
+      font-weight: 700;
+      font-size: 0.95rem;
+      text-decoration: none;
+      transition: opacity 0.15s;
+    }
+    .btn:hover { opacity: 0.88; }
+    .btn-red  { background: var(--red);  color: white; }
+    .btn-blue { background: #2563EB; color: white; }
+
+    /* ABOUT */
+    .about {
+      background: white;
+      border-top: 1px solid #E5E7EB;
+      padding: 3.5rem 1.5rem;
+      text-align: center;
+    }
+    .about h2 {
+      font-size: 1.5rem;
+      font-weight: 800;
+      margin-bottom: 0.75rem;
+    }
+    .about p {
+      color: var(--gray);
+      max-width: 520px;
+      margin: 0 auto 2rem;
+      line-height: 1.7;
+      font-size: 0.95rem;
+    }
+    .about a.cta {
+      display: inline-block;
+      background: var(--navy);
+      color: white;
+      padding: 0.8rem 2rem;
+      border-radius: 0.85rem;
+      text-decoration: none;
+      font-weight: 700;
+      font-size: 0.95rem;
+    }
     .about a.cta:hover { background: #16293f; }
-    footer { background: var(--navy); color: rgba(255,255,255,0.5); text-align: center; padding: 1.5rem; font-size: 0.82rem; margin-top: auto; }
+
+    /* FOOTER */
+    footer {
+      background: var(--navy);
+      color: rgba(255,255,255,0.5);
+      text-align: center;
+      padding: 1.5rem;
+      font-size: 0.82rem;
+      margin-top: auto;
+    }
     footer a { color: rgba(255,255,255,0.5); text-decoration: none; }
     footer a:hover { color: white; }
   </style>
 </head>
 <body>
+
+  <!-- NAV -->
   <nav>
     <a href="/" class="brand">Tamakloe <span>Ventures</span> LLC</a>
     <a href="mailto:waitless@tamakloeventures.com" class="contact">Contact Us</a>
   </nav>
+
+  <!-- HERO -->
   <div class="hero">
     <img src="logo.png" alt="Tamakloe Ventures LLC" class="logo" />
     <h1>Building technology that<br><span>solves real problems</span></h1>
     <p>Practical, mobile-first apps that help everyday people make faster, smarter decisions.</p>
   </div>
+
+  <!-- PRODUCTS -->
   <div class="products">
+
+    <!-- WaitLess -->
     <div class="card">
       <div class="card-header">
         <div class="card-icon icon-red">🏥</div>
@@ -81,9 +302,14 @@
         </ul>
       </div>
       <div class="card-footer">
-        <a href="https://waitless.tamakloeventures.com" class="btn btn-red" target="_blank" rel="noopener">Open WaitLess →</a>
+        <a href="https://waitless.tamakloeventures.com" class="btn btn-red" target="_blank" rel="noopener">
+          Open WaitLess →
+        </a>
+        <img src="https://api.qrserver.com/v1/create-qr-code/?size=128x128&data=https://waitless.tamakloeventures.com" alt="WaitLess QR Code" class="qr" />
       </div>
     </div>
+
+    <!-- RideCompare -->
     <div class="card">
       <div class="card-header">
         <div class="card-icon icon-blue">🚗</div>
@@ -102,17 +328,26 @@
         </ul>
       </div>
       <div class="card-footer">
-        <a href="https://ride.tamakloeventures.com" class="btn btn-blue" target="_blank" rel="noopener">Open RideCompare →</a>
+        <a href="https://ride.tamakloeventures.com" class="btn btn-blue" target="_blank" rel="noopener">
+          Open RideCompare →
+        </a>
+        <img src="https://api.qrserver.com/v1/create-qr-code/?size=128x128&data=https://ride.tamakloeventures.com" alt="RideCompare QR Code" class="qr" />
       </div>
     </div>
+
   </div>
+
+  <!-- ABOUT -->
   <div class="about">
     <h2>About Tamakloe Ventures LLC</h2>
     <p>We build mobile-first web apps that give everyday people the information they need to make better decisions — faster. Based in the United States.</p>
     <a href="mailto:waitless@tamakloeventures.com" class="cta">Get in Touch</a>
   </div>
+
+  <!-- FOOTER -->
   <footer>
     <p>© 2026 Tamakloe Ventures LLC · <a href="https://waitless.tamakloeventures.com">WaitLess</a> · <a href="mailto:waitless@tamakloeventures.com">waitless@tamakloeventures.com</a></p>
   </footer>
+
 </body>
 </html>
