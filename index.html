@@ -19,6 +19,7 @@
       --navy:  #1D3557;
       --red:   #E63946;
       --teal:  #2A9D8F;
+      --green: #2D9D78;
       --light: #F8F9FA;
       --gray:  #6B7280;
     }
@@ -92,7 +93,7 @@
 
     /* PRODUCTS */
     .products {
-      max-width: 900px;
+      max-width: 1100px;
       margin: 0 auto 3rem;
       padding: 2rem 1.25rem 0;
       display: grid;
@@ -103,6 +104,11 @@
       .products {
         grid-template-columns: repeat(2, 1fr);
         padding-top: 2.5rem;
+      }
+    }
+    @media (min-width: 960px) {
+      .products {
+        grid-template-columns: repeat(3, 1fr);
       }
     }
 
@@ -136,16 +142,18 @@
       font-size: 1.6rem;
       flex-shrink: 0;
     }
-    .icon-red  { background: #FEE2E4; }
-    .icon-blue { background: #DBEAFE; }
+    .icon-red   { background: #FEE2E4; }
+    .icon-blue  { background: #DBEAFE; }
+    .icon-green { background: #CCFBF1; }
 
     .card-title {
       font-size: 1.3rem;
       font-weight: 800;
       color: var(--navy);
     }
-    .card-title span.accent-red  { color: var(--red); }
-    .card-title span.accent-blue { color: #2563EB; }
+    .card-title span.accent-red   { color: var(--red); }
+    .card-title span.accent-blue  { color: #2563EB; }
+    .card-title span.accent-green { color: var(--green); }
 
     .card-tag {
       display: inline-block;
@@ -218,8 +226,9 @@
       transition: opacity 0.15s;
     }
     .btn:hover { opacity: 0.88; }
-    .btn-red  { background: var(--red);  color: white; }
-    .btn-blue { background: #2563EB; color: white; }
+    .btn-red   { background: var(--red);   color: white; }
+    .btn-blue  { background: #2563EB;      color: white; }
+    .btn-green { background: var(--green); color: white; }
 
     /* ABOUT */
     .about {
@@ -270,7 +279,7 @@
   <!-- NAV -->
   <nav>
     <a href="/" class="brand">Tamakloe <span>Ventures</span> LLC</a>
-    <a href="mailto:waitless@tamakloeventures.com" class="contact">Contact Us</a>
+    <a href="mailto:support@tamakloeventures.com" class="contact">Contact Us</a>
   </nav>
 
   <!-- HERO -->
@@ -335,18 +344,49 @@
       </div>
     </div>
 
+    <!-- SafeRoute -->
+    <div class="card">
+      <div class="card-header">
+        <div class="card-icon icon-green">🛡️</div>
+        <div>
+          <div class="card-title">Safe<span class="accent-green">Route</span></div>
+          <span class="card-tag tag-live">● Live</span>
+        </div>
+      </div>
+      <div class="card-body">
+        <p>Real-time community safety alerts pinned to a live map — neighbors looking out for neighbors, on foot.</p>
+        <ul class="features">
+          <li>Real-time safety alerts &amp; crime data</li>
+          <li>Missing person alerts (7-day)</li>
+          <li>SOS emergency button</li>
+          <li>Safe Walk location sharing</li>
+        </ul>
+      </div>
+      <div class="card-footer">
+        <a href="https://saferoute.tamakloeventures.com" class="btn btn-green" target="_blank" rel="noopener">
+          Open SafeRoute →
+        </a>
+        <img src="https://api.qrserver.com/v1/create-qr-code/?size=128x128&data=https://saferoute.tamakloeventures.com" alt="SafeRoute QR Code" class="qr" />
+      </div>
+    </div>
+
   </div>
 
   <!-- ABOUT -->
   <div class="about">
     <h2>About Tamakloe Ventures LLC</h2>
     <p>We build mobile-first web apps that give everyday people the information they need to make better decisions — faster. Based in the United States.</p>
-    <a href="mailto:waitless@tamakloeventures.com" class="cta">Get in Touch</a>
+    <a href="mailto:support@tamakloeventures.com" class="cta">Get in Touch</a>
   </div>
 
   <!-- FOOTER -->
   <footer>
-    <p>© 2026 Tamakloe Ventures LLC · <a href="https://waitless.tamakloeventures.com">WaitLess</a> · <a href="mailto:waitless@tamakloeventures.com">waitless@tamakloeventures.com</a></p>
+    <p>© 2026 Tamakloe Ventures LLC ·
+      <a href="https://waitless.tamakloeventures.com">WaitLess</a> ·
+      <a href="https://ride.tamakloeventures.com">RideCompare</a> ·
+      <a href="https://saferoute.tamakloeventures.com">SafeRoute</a> ·
+      <a href="mailto:support@tamakloeventures.com">support@tamakloeventures.com</a>
+    </p>
   </footer>
 
 </body>
